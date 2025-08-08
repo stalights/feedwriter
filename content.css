@@ -1,0 +1,16 @@
+.image-upload-btn{
+  width: 120px;
+  height: 48px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  background-color: #141413;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.image-upload-btn:hover{
+  background-color: #1A1A1A;
+}

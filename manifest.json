@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "FeedWriter",
+  "version": "1.0.0",
+  "description": "크랙의 피드 작성을 도와줍니다.",
+  
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  
+  "host_permissions": [
+    "https://crack.wrtn.ai/*"
+  ],
+  
+  "icon": {
+    "48": "icon48.png"
+  },
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["https://crack.wrtn.ai/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_end"
+    }
+  ],
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*", "assets/*"],
+      "matches": ["https://crack.wrtn.ai/*"]
+    }
+  ]
+}
